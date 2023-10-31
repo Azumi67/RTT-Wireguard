@@ -6,7 +6,7 @@
 
 - [زبان English]
 ------------------------
-![R (a2)](https://github.com/Azumi67/RTT-Wireguard/tree/main#%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA-%D9%85%D9%86)
+![R (a2)](https://github.com/Azumi67/RTT-Wireguard/assets/119934376/3f64bfa8-3785-4a0b-beba-366b3cb73719)
 **دسترسی سریع به اسکریپت**
 
 
