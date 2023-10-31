@@ -6,7 +6,7 @@
 
 - [زبان English]
 ------------------------
-![R (a2)](https://github.com/Azumi67/RTT-Wireguard/assets/119934376/8e8cfa96-104e-4dba-9806-2e365de97745)
+![R (a2)](https://github.com/Azumi67/RTT-Wireguard/tree/main#%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA-%D9%85%D9%86)
 **دسترسی سریع به اسکریپت**
 
 
@@ -88,7 +88,7 @@
 
 <div dir="rtl">&bull; ایپی پرایوت ایران را وارد نمایید</div>
 <div dir="rtl">&bull; پورت تانل 443 را قرار میدهیم و پسورد تانل را وارد می کنیم</div>
-  <div dir="rtl">&bull; SNI ای که در سرور خارج قرار دادیم هم در سرور خارج جای گذاری میکنیم</div>
+  <div dir="rtl">&bull; SNI ای که در سرور ایران قرار دادیم هم در سرور خارج جای گذاری میکنیم</div>
    <div dir="rtl">&bull; پورت هم اکنون وایرگارد سرور خارج را وارد میکنید. به طور مثال 50820</div>
       <div dir="rtl">&bull; ENDOINT وایرگارد شما به این صورت خواهد بود : IRAN-IPV4:443</div>
  
@@ -172,7 +172,7 @@ bash <(curl -s -L https://raw.githubusercontent.com/opiran-club/softether/main/o
 
 
 ```
-
+apt install curl -y && bash <(curl -Ls https://raw.githubusercontent.com/Azumi67/RTT-Wireguard/main/rtt.sh --ipv4)
 ```
 
 
