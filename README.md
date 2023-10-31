@@ -179,13 +179,13 @@ apt install curl -y && bash <(curl -Ls https://raw.githubusercontent.com/Azumi67
 ---------------------------------------------
 ![R (7)](https://github.com/Azumi67/PrivateIP-Tunnel/assets/119934376/42c09cbb-2690-4343-963a-5deca12218c1)
 **تلگرام** 
-![R (6)](https://github.com/Azumi67/FRP-V2ray-Loadbalance/assets/119934376/f81bf6e1-cfed-4e24-b944-236f5c0b15d3) [اپیران](https://github.com/opiran-club)
+![R (6)](https://github.com/Azumi67/FRP-V2ray-Loadbalance/assets/119934376/f81bf6e1-cfed-4e24-b944-236f5c0b15d3) [اپیران- OPIRAN](https://github.com/opiran-club)
 
 ---------------------------------
 ![R23 (1)](https://github.com/Azumi67/FRP-V2ray-Loadbalance/assets/119934376/18d12405-d354-48ac-9084-fff98d61d91c)
 **سورس ها**
 
-![R (6)](https://github.com/Azumi67/RTT-Wireguard/assets/119934376/773f19ca-a44d-41b2-b5c8-572631361268)[سورس  RTT - RADKESVAT]([https://github.com/opiran-club](https://github.com/radkesvat)
+![R (6)](https://github.com/Azumi67/RTT-Wireguard/assets/119934376/773f19ca-a44d-41b2-b5c8-572631361268)[سورس  RTT - Radkesvat](https://github.com/radkesvat)
 
 ![R (9)](https://github.com/Azumi67/FRP-V2ray-Loadbalance/assets/119934376/33388f7b-f1ab-4847-9e9b-e8b39d75deaa) [سورس های OPIRAN](https://github.com/opiran-club)
 
