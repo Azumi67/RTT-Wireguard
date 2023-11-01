@@ -99,7 +99,7 @@
 
 
 <p align="right">
-  <img src="https://github.com/Azumi67/RTT-Wireguard/assets/119934376/cea0dbbd-b1cf-47bb-a0a5-c1e02e34a8a3" alt="Image" />
+  <img src="https://github.com/Azumi67/RTT-Wireguard/assets/119934376/f1fe1c05-d55f-4759-ab56-89ff304d7dac" alt="Image" />
 </p>
 
  <div dir="rtl">&bull; افزودن ایپی 6 NATIVE . [درسرور دیحیتال اوشن تست شده] </div>
