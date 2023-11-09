@@ -32,6 +32,7 @@
 
  
 
+![R (10)](https://github.com/Azumi67/RTT-Wireguard/assets/119934376/343b2a41-6141-4a46-8910-08ce7d9256f5)
 لود بالانس -ریورس تانل - پرایوت ایپی
 ---------------------------------------
 
@@ -42,13 +43,16 @@
  <p align="right">
   <img src="https://github.com/Azumi67/RTT-Wireguard/assets/119934376/bd974599-9dde-4377-9c06-480ebd7533ff" alt="Image" />
 </p>
+
  <div dir="rtl">&bull;در این روش، از پرایوت ایپی برای ارتباط با تانل و از ایپی 6 NATIVE برای لودبالانس استفاده خواهیم کرد  </div>
+  <div dir="rtl">&bull; یا بدون native ipv6 و فقط با پرایوت ایپی تمام کارها را انجام بدیم.</div>
   <div dir="rtl">&bull; برای ساخت پرایوت ایپی از سرور خارج شروع نمایید</div>
    <div dir="rtl">&bull;ایپی 4 سرور ایران و خارج را وارد نمایید </div>
     <div dir="rtl">&bull; تعداد ایپی پرایوت مورد نیاز خود را وارد نمایید</div>
 
 
 ----------------------
+
 
 ![green-dot-clipart-3](https://github.com/Azumi67/6TO4-PrivateIP/assets/119934376/49000de2-53b6-4c5c-888d-f1f397d77b92)**ساخت پرایوت ایپی سرور ایران**
 
@@ -61,12 +65,48 @@
    <div dir="rtl">&bull; تعداد ایپی پرایوتی که میخواهید را وارد نمایید</div>
 
 --------------------------------------
-![green-dot-clipart-3](https://github.com/Azumi67/6TO4-PrivateIP/assets/119934376/c14c77ec-dc4e-4c8a-bdc2-4dc4e42a1815)**ریورس تانل سرور ایران - PRIVATE IP**
+
+![green-dot-clipart-3](https://github.com/Azumi67/6TO4-PrivateIP/assets/119934376/c14c77ec-dc4e-4c8a-bdc2-4dc4e42a1815)**ریورس تانل - سرور ایران بدون native IPV6**
+
+
+<p align="right">
+  <img src="https://github.com/Azumi67/RTT-Wireguard/assets/119934376/1d04f9c8-2ad5-4d7b-b0af-575b06a4f962" alt="Image" />
+</p>
+ <div dir="rtl">&bull; ریورس تانل را از سرور ایران شروع کنید</div>
+  <div dir="rtl">&bull; ادر اینجا من تنها از پرایوت ایپی برای تانل استفاده کردم</div>
+   <div dir="rtl">&bull; پورت تانل را 443 قراردهید و پسورد تانل خود را وارد نمایید</div>
+    <div dir="rtl">&bull; SNI موردنظر خود را وارد نمایید</div>
+     <div dir="rtl">&bull; مقدار زمان مورد نظر خود را برای ریستارت سرویس تانل، وارد نمایید</div>
+       <div dir="rtl">&bull;ایپی پرایوت هایی که ساختید را وارد کنید. مثلا من دو تا وارد کردم</div>
+
+
+---------------------------------
+
+![green-dot-clipart-3](https://github.com/Azumi67/6TO4-PrivateIP/assets/119934376/2c1ae043-4bc5-4738-b1d4-6951c8fecbdc)**ریورس تانل - سرور خارج بدون native IPV6**
+
+
+<p align="right">
+  <img src="https://github.com/Azumi67/RTT-Wireguard/assets/119934376/b25a73e4-2972-4a80-8eff-5dfebf429f67" alt="Image" />
+</p>
+
+<div dir="rtl">&bull; ایپی پرایوت ایران را وارد نمایید</div>
+<div dir="rtl">&bull; پورت تانل 443 را قرار میدهیم و پسورد تانل را وارد می کنیم</div>
+  <div dir="rtl">&bull; SNI ای که در سرور ایران قرار دادیم هم در سرور خارج جای گذاری میکنیم</div>
+   <div dir="rtl">&bull; پورت هم اکنون وایرگارد سرور خارج را وارد میکنید. به طور مثال 50820</div>
+      <div dir="rtl">&bull; ENDOINT وایرگارد شما به این صورت خواهد بود : IRAN-IPV4:443</div>
+
+  ---------------------------------
+  ![R (10)](https://github.com/Azumi67/RTT-Wireguard/assets/119934376/343b2a41-6141-4a46-8910-08ce7d9256f5)
+  **لود بالانس -ریورس تانل - پرایوت ایپی و native IPV6**
+  -----------
+      
+![green-dot-clipart-3](https://github.com/Azumi67/6TO4-PrivateIP/assets/119934376/c14c77ec-dc4e-4c8a-bdc2-4dc4e42a1815)**ریورس تانل - سرور ایران با native IPV6**
 
 
 <p align="right">
   <img src="https://github.com/Azumi67/RTT-Wireguard/assets/119934376/5ce74f8f-e0ba-496b-a271-217775032194" alt="Image" />
 </p>
+ <div dir="rtl">&bull;مانند قبل پرایوت ایپی را بسازید</div>
  <div dir="rtl">&bull; ریورس تانل را از سرور ایران شروع کنید</div>
   <div dir="rtl">&bull;با استفاده از اسکریپت یا به صورت دستی چندین ایپی 6 native برای سرور خارج به منظور لود بالانس ایجاد نمایید</div>
   <div dir="rtl">&bull; تعداد ایپی 6 NATIVE خارج خود را وارد نمایید. به طور مثال من دو ایپی 6 خارج را برای لود بالانس وارد میکنم</div>
@@ -78,8 +118,7 @@
 
 ---------------------------------
 
-
-![green-dot-clipart-3](https://github.com/Azumi67/6TO4-PrivateIP/assets/119934376/2c1ae043-4bc5-4738-b1d4-6951c8fecbdc)**ریورس تانل سرور خارج - PTIVATE IP**
+![green-dot-clipart-3](https://github.com/Azumi67/6TO4-PrivateIP/assets/119934376/2c1ae043-4bc5-4738-b1d4-6951c8fecbdc)**ریورس تانل - سرور خارج**
 
 
 
@@ -94,6 +133,7 @@
       <div dir="rtl">&bull; ENDOINT وایرگارد شما به این صورت خواهد بود : IRAN-IPV4:443</div>
  
 ------------------------------------------------------------------------------
+![R (10)](https://github.com/Azumi67/RTT-Wireguard/assets/119934376/343b2a41-6141-4a46-8910-08ce7d9256f5)
 لود بالانس - NATIVE IPV6 - ریورس تانل
 ----------------------------
 ![green-dot-clipart-3](https://github.com/Azumi67/6TO4-PrivateIP/assets/119934376/2c1ae043-4bc5-4738-b1d4-6951c8fecbdc)**ریورس تانل سرور خارج -افزودن ایپی 6 NATIVE**
