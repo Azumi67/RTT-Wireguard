@@ -33,7 +33,7 @@
  
 
 ![R (10)](https://github.com/Azumi67/RTT-Wireguard/assets/119934376/343b2a41-6141-4a46-8910-08ce7d9256f5)
-لود بالانس -ریورس تانل - پرایوت ایپی
+روش اول :لود بالانس -ریورس تانل - پرایوت ایپی
 ---------------------------------------
 
 ![green-dot-clipart-3](https://github.com/Azumi67/6TO4-PrivateIP/assets/119934376/902a2efa-f48f-4048-bc2a-5be12143bef3) **ساخت پرایوت ایپی سرور خارج**
@@ -97,7 +97,7 @@
 
   ---------------------------------
   ![R (10)](https://github.com/Azumi67/RTT-Wireguard/assets/119934376/343b2a41-6141-4a46-8910-08ce7d9256f5)
-  **لود بالانس -ریورس تانل - پرایوت ایپی و native IPV6**
+  **روش دوم : لود بالانس -ریورس تانل - پرایوت ایپی و native IPV6**
   -----------
       
 ![green-dot-clipart-3](https://github.com/Azumi67/6TO4-PrivateIP/assets/119934376/c14c77ec-dc4e-4c8a-bdc2-4dc4e42a1815)**ریورس تانل - سرور ایران با native IPV6**
@@ -134,7 +134,7 @@
  
 ------------------------------------------------------------------------------
 ![R (10)](https://github.com/Azumi67/RTT-Wireguard/assets/119934376/343b2a41-6141-4a46-8910-08ce7d9256f5)
-لود بالانس - NATIVE IPV6 - ریورس تانل
+روش سوم : لود بالانس - NATIVE IPV6 - ریورس تانل
 ----------------------------
 ![green-dot-clipart-3](https://github.com/Azumi67/6TO4-PrivateIP/assets/119934376/2c1ae043-4bc5-4738-b1d4-6951c8fecbdc)**ریورس تانل سرور خارج -افزودن ایپی 6 NATIVE**
 
@@ -191,13 +191,19 @@
 ------------------------------------------
 ![scri](https://github.com/Azumi67/FRP-V2ray-Loadbalance/assets/119934376/cbfb72ac-eff1-46df-b5e5-a3930a4a6651)
 **اسکریپت های کارآمد :**
+- این اسکریپت ها optional میباشد.
 
 
- <div dir="rtl">&bull; میتوانید از اسکریپت opiran vps optimizer یا هر اسکریپت دیگری استفاده نمایید.</div>
  
- 
+ Opiran Script
 ```
 apt install curl -y && bash <(curl -s https://raw.githubusercontent.com/opiran-club/VPS-Optimizer/main/optimizer.sh --ipv4)
+```
+
+Hawshemi script
+
+```
+wget "https://raw.githubusercontent.com/hawshemi/Linux-Optimizer/main/linux-optimizer.sh" -O linux-optimizer.sh && chmod +x linux-optimizer.sh && bash linux-optimizer.sh
 ```
 
 <div dir="rtl">&bull; اضافه کردن ایپی 6 اضافه</div>
@@ -227,6 +233,8 @@ apt install curl -y && bash <(curl -Ls https://raw.githubusercontent.com/Azumi67
 **سورس ها**
 
 ![R (6)](https://github.com/Azumi67/RTT-Wireguard/assets/119934376/773f19ca-a44d-41b2-b5c8-572631361268)[سورس  RTT - Radkesvat](https://github.com/radkesvat)
+
+![R (9)](https://github.com/Azumi67/6TO4-GRE-IPIP-SIT/assets/119934376/4758a7da-ab54-4a0a-a5a6-5f895092f527)[سورس های Hwashemi](https://github.com/hawshemi/Linux-Optimizer)
 
 ![R (9)](https://github.com/Azumi67/FRP-V2ray-Loadbalance/assets/119934376/33388f7b-f1ab-4847-9e9b-e8b39d75deaa) [سورس های OPIRAN](https://github.com/opiran-club)
 
