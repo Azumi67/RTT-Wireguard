@@ -127,7 +127,7 @@ function main_menu() {
         echo -e "\e[93m╠════════════════════════════════════════════════════════════════╣\e[0m" 
         display_service_status                                 
         echo -e "\e[93m╔════════════════════════════════════════════════════════════════╗\e[0m"
-        echo -e   "\e[91m      ������ \e[92mJoin Opiran Telegram \e[34m@https://t.me/OPIranClub\e[0m \e[91m������\e[0m"
+        echo -e   "\e[91m    ������ \e[92mJoin Opiran Telegram \e[34m@https://t.me/OPIranClub\e[0m \e[91m������\e[0m"
         echo -e "\e[93m╠════════════════════════════════════════════════════════════════╣\e[0m" 
         echo -e "1. \e[96mInstallation\e[0m"                                 
         echo -e "2. \e[92mRTT + Private IP Tunnel\e[0m"                                                 
