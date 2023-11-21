@@ -127,7 +127,7 @@ function main_menu() {
         echo -e "\e[93m╠════════════════════════════════════════════════════════════════╣\e[0m" 
         display_service_status                                 
         echo -e "\e[93m╔════════════════════════════════════════════════════════════════╗\e[0m"
-        echo -e   "\e[91m      ������ \e[92mJoin Opiran Telegram \e[34m@https://t.me/OPIranClub\e[0m \e[91m������\e[0m"
+        echo -e   "\e[91m      ������ \e[92mJoin Opiran Telegram \e[34m@https://t.me/OPIranClub\e[0m \e[91m������\e[0m"
         echo -e "\e[93m╠════════════════════════════════════════════════════════════════╣\e[0m" 
         echo -e "1. \e[96mInstallation\e[0m"                                 
         echo -e "2. \e[92mRTT + Private IP Tunnel\e[0m"                                                 
@@ -533,66 +533,72 @@ function native_rtt_menu() {
   echo $'\e[92m "-"\e[93m═════════════════════\e[0m'
   echo ""
   echo -e "\e[93m.-------------------------------------------------------------------------------------------------------.\e[0m"
-  echo -e "\e[93m| \e[92mIf it didn't work, please uninstall it and add extra ip manually  \e[0m"
-  echo -e "\e[93m|\e[0m  If you don't have native ipv6, please use private ip instead.                                             \e[0m"
+  echo -e "\e[93m| \e[92mIf it didn't work, please uninstall it and add extra IP manually  \e[0m"
+  echo -e "\e[93m|\e[0m  If you don't have native IPv6, please use a private IP instead.                                             \e[0m"
   echo -e "\e[93m'-------------------------------------------------------------------------------------------------------'\e[0m"
   display_notification $'\e[93mAdding extra Native IPV6 [Kharej]...\e[0m'
   printf "\e[93m╭──────────────────────────────────────────────────────────╮\e[0m\n"
-  
-#interface
-interface=$(ip route | awk '/default/ {print $5; exit}')
-ipv6_addresses=($(ip -6 addr show dev $interface | awk '/inet6 .* global/ {print $2}' | cut -d'/' -f1))
 
-echo -e "\e[92mCurrent IPv6 addresses on $interface:\e[0m"
-printf '%s\n' "${ipv6_addresses[@]}"
+  # interface
+  interface=$(ip route | awk '/default/ {print $5; exit}')
+  ipv6_addresses=($(ip -6 addr show dev $interface | awk '/inet6 .* global/ {print $2}' | cut -d'/' -f1))
 
-read -e -p $'\e[93mAre these your current IPv6 addresses? (y/n): \e[0m' confirm
+  echo -e "\e[92mCurrent IPv6 addresses on $interface:\e[0m"
+  printf '%s\n' "${ipv6_addresses[@]}"
 
-if [[ $confirm != "y" && $confirm != "Y" ]]; then
-    echo $'\e[91mAborted. Please manually configure the correct IPv6 addresses.\e[0m'
-    exit 1
-fi
+  read -e -p $'\e[93mAre these your current IPv6 addresses? (y/n): \e[0m' confirm
 
-# IPv6 addresses 
-IFS=$'\n' sorted_addresses=($(sort -r <<<"${ipv6_addresses[*]}"))
-unset IFS
+  if [[ $confirm != "y" && $confirm != "Y" ]]; then
+      echo $'\e[91mAborted. Please manually configure the correct IPv6 addresses.\e[0m'
+      exit 1
+  fi
 
-additional_address=""
-for ((i = 0; i <= ${#sorted_addresses[@]}; i++)); do
-    # current IPv6 address
-    current_last_part=$(echo "${sorted_addresses[i]##*:}")
 
-    # address
-    modified_last_part_hex=$(printf '%04x' "$((16#$current_last_part + 1))")
+  IFS=$'\n' sorted_addresses=($(sort -r <<<"${ipv6_addresses[*]}"))
+  unset IFS
 
-    # newww address
-    modified_address="${sorted_addresses[i]%:*}:$modified_last_part_hex"
+  additional_address=""
+  for ((i = 0; i < ${#sorted_addresses[@]}; i++)); do
+      # current IPv6 address
+      current_last_part=$(echo "${sorted_addresses[i]##*:}")
 
-    if [[ ! " ${sorted_addresses[@]} " =~ " $modified_address " ]]; then
-        additional_address=$modified_address
-        break
-    fi
-done
 
-if [[ -z "$additional_address" ]]; then
-    echo "No additional address to add."
-    exit 0
-fi
+      modified_last_part_hex=$(printf '%04x' "$((16#$current_last_part + 1))")
 
-# interface
-ip addr add "$additional_address/64" dev $interface
 
-# /etc
-script_file="/etc/ipv6.sh"
-echo "#!/bin/bash" > $script_file
-echo "ip addr add $additional_address/64 dev $interface" >> $script_file
+      modified_address="${sorted_addresses[i]%:*}:$modified_last_part_hex"
 
-chmod +x $script_file
+      if [[ ! " ${sorted_addresses[@]} " =~ " $modified_address " ]]; then
+          additional_address=$modified_address
+          break
+      fi
+  done
 
-# cronjob
-display_notification $'\e[93mAdding cron job for the server...\e[0m'
-(crontab -l 2>/dev/null; echo "@reboot /bin/bash /etc/ipv6.sh") | crontab -
-  
+  if [[ -z "$additional_address" ]]; then
+      echo "No additional address to add."
+      exit 0
+  fi
+
+  # interface
+  ip addr add "$additional_address/64" dev $interface
+
+  # /etc
+  script_file="/etc/ipv6.sh"
+
+
+  echo "ip addr add $additional_address/64 dev $interface" >> $script_file
+
+  chmod +x $script_file
+
+  # cronjob
+
+
+  (crontab -l | grep -v "/etc/ipv6.sh") | crontab -
+
+
+   display_notification $'\e[93mAdding cron job for the server...\e[0m'
+  (crontab -l 2>/dev/null; echo "@reboot /bin/bash /etc/ipv6.sh") | crontab -
+
   display_checkmark $'\e[92mIPv6 addresses added successfully!\e[0m'
 }
 function irann_rtt_menu() {
