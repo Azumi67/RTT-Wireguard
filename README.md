@@ -14,6 +14,7 @@
 ![Update-Note--Arvin61r58](https://github.com/Azumi67/6TO4-GRE-IPIP-SIT/assets/119934376/a149bfde-0f8f-44db-8360-0f9e9325983b) **اپدیت**
 
 - مشکل ذخیره نکردن ایپی های جدید Native IPV6 حل شد
+- اگر دوست داشتید، میتوانید از این اسکریپت دیگر هم برای تانل وایرگارد و همچنین v2ray استفاده کنید. تانل icmp با تانل RTT ادغام شده است. >> https://github.com/Azumi67/RTT-ICMP-Tunnel
 
 --------------------------------
 
