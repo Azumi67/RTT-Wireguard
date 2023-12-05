@@ -422,7 +422,6 @@ ipv4_forwarding=$(sysctl -n net.ipv4.ip_forward)
     fi
 
     # DNS baraye install
-    echo "nameserver 8.8.8.8" > /etc/resolv.conf
 
     # CPU architecture
     arch=$(uname -m)
